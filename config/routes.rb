@@ -1,5 +1,5 @@
 GistTools::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   root 'pages#index'
   get "pages/index"
   # The priority is based upon order of creation: first created -> highest priority.
