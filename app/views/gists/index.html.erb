@@ -1,1 +1,9 @@
 <h1>Gists</h1>
+<% @gists.each do |gist| %>
+  <p>
+    <%= gist["description"] %>
+    <%= gist["updated_at"] %>
+    <%= gist["html_url"] %>
+    <%= gist["language"] %>
+  </p>
+<% end %>
