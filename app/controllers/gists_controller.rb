@@ -5,6 +5,7 @@ class GistsController < ApplicationController
   end
 
   def show
+    @gist = Gist.new(params[:id]).raw_data
   end
 
 end
