@@ -5,5 +5,6 @@
     <%= gist["updated_at"] %>
     <%= gist["html_url"] %>
     <%= gist["language"] %>
+    <%= link_to gist["id"], gist_path(gist["id"]) %>
   </p>
 <% end %>
