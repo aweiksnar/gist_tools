@@ -4,4 +4,7 @@ class GistsController < ApplicationController
     @gists = current_user.raw_gists
   end
 
+  def show
+  end
+
 end
