@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def raw_gists
-    url = "https://api.github.com/users/#{self.github_username}/gists"
+    url = "https://api.github.com/users/#{self.github_username}/gists?access_token=#{self.github_access_token}"
     @result = JSON.parse(open(url).read)
   end
 end
