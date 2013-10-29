@@ -8,6 +8,7 @@
   <%= stylesheet_link_tag    "genericons", media: "all", "data-turbolinks-track" => true %>
 </head>
 <body>
+<h1>Gist Tools</h1>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <span>
@@ -15,7 +16,7 @@
   <% if current_user %>
     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
   <% else %>
-  <%= link_to "Sign in with Github", "users/auth/github" %>
+    <%= link_to "Sign in with Github", "users/auth/github" %>
   <% end %>
 </span>
 
