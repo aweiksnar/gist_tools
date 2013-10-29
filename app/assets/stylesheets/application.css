@@ -12,6 +12,8 @@
  *= require_tree .
  */
 
+/*-----Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds-----*/
+
 body {
  background: url(ocean_gradient.jpg) no-repeat center center fixed;
  -webkit-background-size: cover;
@@ -24,9 +26,35 @@ body {
   width: 0px;
   height: 0px;
   border-style: solid;
-  border-width: 750px 300px 0 0;
+  border-width: 750px 250px 0 0;
   border-color: #aaa transparent transparent transparent;
   position: absolute;
   top:0px;
+  opacity: 0.3;
   z-index: -1;
+}
+
+.orange_gradient {
+ background: url(orange_gradient.jpg) no-repeat center center fixed;
+}
+
+/*-----Text----------Text----------Text----------Text----------Text----------Text----------Text----------Text-----*/
+
+.light_text {
+  color: #EFFFF9;
+}
+
+.large {
+  font-size: 55px;
+}
+
+/*-----Forms----------Forms----------Forms----------Forms----------Forms----------Forms----------Forms-----*/
+
+#id_entry {
+  color: color: black !important;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 115px;
+  background: none;
 }
