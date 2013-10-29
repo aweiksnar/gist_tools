@@ -8,15 +8,14 @@
   <%= stylesheet_link_tag    "genericons", media: "all", "data-turbolinks-track" => true %>
 </head>
 <body>
-<h1><span class="neon_green">Gist</span><span class="light_text">tools</span></h1>
+<h1 id="site_title"><span class="neon_green">Gist</span><span class="light_text">tools</span></h1>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <span>
-  <div class="genericon genericon-github"></div>
   <% if current_user %>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <%= link_to "", destroy_user_session_path, method: :delete, class: "genericon genericon-github big_icon orange_icon" %>
   <% else %>
-    <%= link_to "Sign in with Github", "users/auth/github" %>
+    <%= link_to "", "users/auth/github", class: "genericon genericon-github big_icon" %>
   <% end %>
 </span>
 

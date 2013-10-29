@@ -12,6 +12,11 @@
  *= require_tree .
  */
 
+p.notice, p.alert {
+  color: white;
+  padding-left: 10px;
+}
+
 /*-----Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds-----*/
 
 body {
@@ -48,8 +53,33 @@ body {
   color: #CBF035
 }
 
+.orange_icon:before {
+  color: #ff673f
+}
+
 .large {
   font-size: 55px;
+}
+
+#site_title {
+  font-size: 45px;
+  padding-left: 10px;
+}
+
+.big_icon:before {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.big_icon {
+  color: #fff;
+}
+
+.big_icon:hover {
+  color: #CBF035;
+  text-decoration: none;
 }
 
 
