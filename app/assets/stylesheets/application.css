@@ -44,14 +44,19 @@ body {
   color: #EFFFF9;
 }
 
+.neon_green{
+  color: #CBF035
+}
+
 .large {
   font-size: 55px;
 }
 
+
 /*-----Forms----------Forms----------Forms----------Forms----------Forms----------Forms----------Forms-----*/
 
 #id_entry {
-  color: color: black !important;
+  color: white;
   outline: 0;
   border: 0;
   border-bottom: 1px solid black;
