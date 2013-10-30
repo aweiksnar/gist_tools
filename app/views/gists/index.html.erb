@@ -1,10 +1,15 @@
-<h1>Gists</h1>
-<% @gists.each do |gist| %>
-  <p>
-    <%= gist["description"] %>
-    <%= gist["updated_at"] %>
-    <%= gist["html_url"] %>
-    <%= gist["language"] %>
-    <%= link_to gist["id"], gist_path(gist["id"]) %>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3 opaque_bg">
+    <h1 class="large">Your <span class="neon_green">Gists</span></h1>
+    <% @gists.each do |gist| %>
+      <p>
+        <div class="genericon genericon-github"></div>
+        <%= Time.parse(gist["updated_at"]).strftime("%b %e %Y") %>
+        <%= gist["description"] %>
+        <%= gist["html_url"] %>
+        #ID: <%= link_to gist["id"], gist_path(gist["id"]) %>
+      </p>
+    <% end %>
+
+  </div>
+</div>
