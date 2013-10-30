@@ -39,10 +39,6 @@ body {
   z-index: -1;
 }
 
-.orange_gradient {
- background: url(orange_gradient.jpg) no-repeat center center fixed;
-}
-
 /*-----Text----------Text----------Text----------Text----------Text----------Text----------Text----------Text-----*/
 
 .light_text {
@@ -89,7 +85,7 @@ body {
   color: white;
   outline: 0;
   border: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fff;
   width: 115px;
   background: none;
 }
