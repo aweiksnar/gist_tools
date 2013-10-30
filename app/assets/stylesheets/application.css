@@ -17,6 +17,10 @@ p.notice, p.alert {
   padding-left: 10px;
 }
 
+form {
+  display: inline
+}
+
 /*-----Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds-----*/
 
 body {

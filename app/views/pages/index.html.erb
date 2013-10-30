@@ -2,10 +2,13 @@
   <div class="col-sm-6 col-sm-offset-3 opaque_bg">
     <h1 class="large light_text">Stats about your <span class="neon_green">Gists</span></h1>
     <h1>
-      Sign in with Github
+      <%= link_to "Sign in with Github", "users/auth/github" %>
       <br>or<br>
       Enter a <span class="neon_green">Gist</span> ID to try it out:
-      <input id="id_entry">
+      <%= form_tag(gists_path) do %>
+        <%= text_field_tag "id", nil, id: "id_entry" %>
+      <% end %>
+      <!-- <input id="id_entry"> -->
     </h1>
   </div>
 </div>

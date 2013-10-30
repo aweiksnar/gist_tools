@@ -4,4 +4,5 @@ GistTools::Application.routes.draw do
   get "pages/index"
   get "gists/:id" => "gists#show", as: "gist"
   get "gists" => "gists#index", as: "gists"
+  post "gists" => "gists#display_gist"
 end

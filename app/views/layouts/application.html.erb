@@ -14,10 +14,10 @@
   <span>
   <% if current_user %>
     <%= link_to "", destroy_user_session_path, method: :delete, class: "genericon genericon-github big_icon orange_icon", id: "sign_out" %>
-    <span class="icon_text">Sign Out</span>
+    <span class="icon_text">Sign out</span>
   <% else %>
     <%= link_to "", "users/auth/github", class: "genericon genericon-github big_icon", id: "sign_in" %>
-    <span class="icon_text">Sign In</span>
+    <span class="icon_text">Sign in with Github</span>
   <% end %>
   </span>
   <div class="left_triangle"></div>
