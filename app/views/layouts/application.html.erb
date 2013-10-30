@@ -8,18 +8,30 @@
   <%= stylesheet_link_tag    "genericons", media: "all", "data-turbolinks-track" => true %>
 </head>
 <body>
-<h1 id="site_title"><span class="neon_green">Gist</span><span class="light_text">tools</span></h1>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<span>
+  <h1 id="site_title"><span class="neon_green">Gist</span><span class="light_text">tools</span></h1>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <span>
   <% if current_user %>
-    <%= link_to "", destroy_user_session_path, method: :delete, class: "genericon genericon-github big_icon orange_icon" %>
+    <%= link_to "", destroy_user_session_path, method: :delete, class: "genericon genericon-github big_icon orange_icon", id: "sign_out" %>
+    <span class="icon_text">Sign Out</span>
   <% else %>
-    <%= link_to "", "users/auth/github", class: "genericon genericon-github big_icon" %>
+    <%= link_to "", "users/auth/github", class: "genericon genericon-github big_icon", id: "sign_in" %>
+    <span class="icon_text">Sign In</span>
   <% end %>
-</span>
-
-<%= yield %>
+  </span>
+  <div class="left_triangle"></div>
+  <%= yield %>
 
 </body>
 </html>
+
+<script>
+  $( "#sign_in, #sign_out" ).hover(
+    function() {
+      $( ".icon_text" ).css( "color", "white" );
+    }, function() {
+      $( ".icon_text" ).css( "color", "transparent" );
+    }
+  );
+</script>
