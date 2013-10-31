@@ -38,4 +38,8 @@ class Gist
     raw_data["files"].each_value{|v| return v["filename"]}
   end
 
+  def file_body
+    raw_data["files"].each_value{|v| return open(v["raw_url"]).readlines}
+  end
+
 end

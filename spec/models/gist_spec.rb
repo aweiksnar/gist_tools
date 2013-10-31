@@ -71,4 +71,12 @@ describe Gist do
       expect(gist.file_name.class).to eq(String)
     end
   end
+
+  describe "#file_body" do
+    it {expect(gist).to respond_to(:file_body)}
+
+    it "should return an array" do
+      expect(gist.file_body.class).to eq(Array)
+    end
+  end
 end

@@ -9,6 +9,11 @@ Characters: <%= @gist.characters %>
 
 Filename: <%= @gist.file_name %>
 
+File:
+<% @gist.file_body.each do |line| %>
+  <%= line %>
+<% end %>
+
 </br>
 
 <%= @raw_data %>
