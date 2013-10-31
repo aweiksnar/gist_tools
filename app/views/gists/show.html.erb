@@ -1,3 +1,10 @@
 <h1>Gist <%= params[:id] %></h1>
 
-<%= @gist %>
+Comments: <%= @gist.comments %>
+Forks:    <%= @gist.forks %>
+Revisions: <%= @gist.revisions %>
+Age  <%= @gist.age %> hours
+
+</br>
+
+<%= @raw_data %>

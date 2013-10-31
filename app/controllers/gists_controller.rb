@@ -5,7 +5,8 @@ class GistsController < ApplicationController
   end
 
   def show
-    @gist = Gist.new(params[:id], current_user.github_access_token).raw_data
+    @gist = Gist.new(params[:id], current_user.github_access_token)
+    @raw_data = Gist.new(params[:id], current_user.github_access_token).raw_data
   end
 
   def display_gist

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Gist do
-  let(:gist){Gist.new(1305321)}
+  let(:gist){Gist.new(1305321, ENV['GITHUBTESTTOKEN'])}
 
   it "should exist when created" do
     expect(gist).not_to be_nil
@@ -16,4 +16,35 @@ describe Gist do
     end
   end
 
+  describe "#comments" do
+    it {expect(gist).to respond_to(:comments)}
+
+    it "should return a number" do
+      expect(gist.comments.class).to eq(Fixnum)
+    end
+  end
+
+  describe "#forks" do
+    it {expect(gist).to respond_to(:forks)}
+
+    it "should return a number" do
+      expect(gist.forks.class).to eq(Fixnum)
+    end
+  end
+
+  describe "#revisions" do
+    it {expect(gist).to respond_to(:revisions)}
+
+    it "should return a number" do
+      expect(gist.revisions.class).to eq(Fixnum)
+    end
+  end
+
+  describe "#age" do
+    it {expect(gist).to respond_to(:age)}
+
+    it "should return a number" do
+      expect(gist.age.class).to eq(Fixnum)
+    end
+  end
 end
