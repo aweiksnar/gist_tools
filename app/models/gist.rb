@@ -26,4 +26,12 @@ class Gist
     ((Time.now - Time.parse(raw_data["created_at"])) / 60 / 60).round
   end
 
+  def commits
+    JSON.parse(open(raw_data["commits_url"]).read).count
+  end
+
+  def characters
+    raw_data["files"].each_value{|v| return v["size"]}
+  end
+
 end

@@ -47,4 +47,20 @@ describe Gist do
       expect(gist.age.class).to eq(Fixnum)
     end
   end
+
+  describe "#commits" do
+    it {expect(gist).to respond_to(:commits)}
+
+    it "should return a number" do
+      expect(gist.commits.class).to eq(Fixnum)
+    end
+  end
+
+  describe "#characters" do
+    it {expect(gist).to respond_to(:characters)}
+
+    it "should return a number" do
+      expect(gist.characters.class).to eq(Fixnum)
+    end
+  end
 end
