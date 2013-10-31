@@ -7,7 +7,7 @@ class Gist
 
   def raw_data
     url = "https://api.github.com/gists/#{@id}?access_token=#{@github_access_token}"
-    @result = JSON.parse(open(url).read)
+    JSON.parse(open(url).read)
   end
 
   def comments
@@ -32,6 +32,10 @@ class Gist
 
   def characters
     raw_data["files"].each_value{|v| return v["size"]}
+  end
+
+  def file_name
+    raw_data["files"].each_value{|v| return v["filename"]}
   end
 
 end

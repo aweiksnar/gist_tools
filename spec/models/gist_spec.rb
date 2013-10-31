@@ -63,4 +63,12 @@ describe Gist do
       expect(gist.characters.class).to eq(Fixnum)
     end
   end
+
+  describe "#file_name" do
+    it {expect(gist).to respond_to(:file_name)}
+
+    it "should return a string" do
+      expect(gist.file_name.class).to eq(String)
+    end
+  end
 end
