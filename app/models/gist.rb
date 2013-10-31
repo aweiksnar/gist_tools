@@ -46,4 +46,8 @@ class Gist
     raw_data["url"]
   end
 
+  def description
+    raw_data["description"].to_s
+  end
+
 end

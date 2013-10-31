@@ -87,4 +87,14 @@ describe Gist do
       expect(gist.url.class).to eq(String)
     end
   end
+
+  describe "#description" do
+    it {expect(gist).to respond_to(:description)}
+
+    it "should return a string" do
+      expect(gist.description.class).to eq(String)
+    end
+  end
+
+
 end

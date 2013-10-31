@@ -7,6 +7,7 @@ Age:  <%= @gist.age %> hours
 Commits: <%= @gist.commits %>
 Characters: <%= @gist.characters %>
 URL: <%= @gist.url %>
+Desc: <%= @gist.description %>
 
 Filename: <%= @gist.file_name %>
 
@@ -14,4 +15,3 @@ File:
 <% @gist.file_body.each do |line| %>
   <%= line %>
 <% end %>
-
