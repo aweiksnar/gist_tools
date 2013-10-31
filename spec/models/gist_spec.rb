@@ -79,4 +79,12 @@ describe Gist do
       expect(gist.file_body.class).to eq(Array)
     end
   end
+
+  describe "#url" do
+    it {expect(gist).to respond_to(:url)}
+
+    it "should return a string" do
+      expect(gist.url.class).to eq(String)
+    end
+  end
 end
