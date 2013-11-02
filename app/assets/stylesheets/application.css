@@ -47,6 +47,10 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.stats {
+  word-wrap:break-word;
+}
+
 /*-----Text----------Text----------Text----------Text----------Text----------Text----------Text----------Text-----*/
 
 .light_text {
@@ -90,6 +94,17 @@ body {
   margin-left: 35px;
   line-height: 32px;
   color:transparent;
+}
+
+.stat_num {
+  font-size: 55px;
+  color: #CBF035;
+  font-weight: bold;
+}
+
+.stat_text {
+  font-family: monospace;
+  font-size: 20px;
 }
 
 
