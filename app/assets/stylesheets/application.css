@@ -21,6 +21,10 @@ form {
   display: inline
 }
 
+li {
+  list-style-type: none;
+}
+
 /*-----Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds-----*/
 
 body {
@@ -107,6 +111,9 @@ body {
   font-size: 20px;
 }
 
+.gist_file {
+  margin-top: 10px;
+}
 
 /*-----Forms----------Forms----------Forms----------Forms----------Forms----------Forms----------Forms-----*/
 
