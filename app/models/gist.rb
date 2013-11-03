@@ -6,7 +6,11 @@ class Gist
   end
 
   def raw_data
-    url = "https://api.github.com/gists/#{@id}?access_token=#{@github_access_token}"
+    if @access_token
+      url = "https://api.github.com/gists/#{@id}?access_token=#{@github_access_token}"
+    else
+      url = "https://api.github.com/gists/#{@id}"
+    end
     JSON.parse(open(url).read)
   end
 

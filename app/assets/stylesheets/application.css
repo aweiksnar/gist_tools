@@ -25,6 +25,16 @@ li {
   list-style-type: none;
 }
 
+body {
+  border-top: 5px solid #CBF035;
+}
+
+#api_counter {
+  top:5px;
+  float: right;
+  color: #8d9aa9;
+}
+
 /*-----Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds-----*/
 
 body {

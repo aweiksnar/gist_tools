@@ -5,7 +5,11 @@ class GistsController < ApplicationController
   end
 
   def show
-    @gist = Gist.new(params[:id], current_user.github_access_token)
+    if current_user
+      @gist = Gist.new(params[:id], current_user.github_access_token)
+    else
+      @gist = Gist.new(params[:id], nil)
+    end
   end
 
   def display_gist
