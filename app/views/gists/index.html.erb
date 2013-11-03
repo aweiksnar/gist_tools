@@ -2,14 +2,13 @@
   <div class="col-sm-6 col-sm-offset-3 opaque_bg">
     <h1 class="large">Your <span class="neon_green">Gists</span></h1>
     <% @gists.each do |gist| %>
-      <p>
-        <div class="genericon genericon-github"></div>
-        <%= Time.parse(gist["updated_at"]).strftime("%b %e %Y") %>
-        <%= gist["description"] %>
-        <%= gist["html_url"] %>
-        #ID: <%= link_to gist["id"], gist_path(gist["id"]) %>
+      <p class="line" id="gist_index">
+        <%= link_to "", gist["html_url"], class: "genericon genericon-github" %>
+        <a href="<%= gist_path(gist["id"]) %>">
+        <%= Time.parse(gist["updated_at"]).strftime("%b %e, %Y") %><br>
+        <span class="stat_text"><%= gist["description"] %></span>
+        </a>
       </p>
     <% end %>
-
   </div>
 </div>
