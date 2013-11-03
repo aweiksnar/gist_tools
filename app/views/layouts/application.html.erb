@@ -34,4 +34,8 @@
       $( ".icon_text" ).css( "color", "transparent" );
     }
   );
+
+  if(<%= rate_limit %> <= 15)
+    $("#api_counter").css("color", "orangered");
+
 </script>
