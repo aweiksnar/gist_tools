@@ -43,7 +43,7 @@ class Gist
   end
 
   def url
-    raw_data["url"]
+    raw_data["html_url"]
   end
 
   def description

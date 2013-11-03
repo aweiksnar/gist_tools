@@ -51,7 +51,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.stats {
+.line {
   word-wrap:break-word;
 }
 
@@ -113,6 +113,11 @@ body {
 
 .gist_file {
   margin-top: 10px;
+}
+
+#source_icon_link {
+  float: right;
+  margin: 5px -10px 0 0;
 }
 
 /*-----Forms----------Forms----------Forms----------Forms----------Forms----------Forms----------Forms-----*/

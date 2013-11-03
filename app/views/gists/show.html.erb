@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3 opaque_bg">
     <h1 class="large light_text"><span class="neon_green">Gist</span><%= @gist.file_name %></h1>
-    <div class="row stats">
+    <div class="row line">
       <p class="col-sm-4"><span class="stat_num"><%= @gist.comments %></span><br><span class="stat_text">Comments</span></p>
       <p class="col-sm-4 col-sm-offset-2"><span class="stat_num"><%= @gist.forks %></span><br><span class="stat_text">Forks</span></p>
     </div>
 
-    <div class="row stats">
+    <div class="row line">
       <p class="col-sm-4"><span class="stat_num"><%= @gist.revisions %></span><br><span class="stat_text">Revisions</span></p>
       <p class="col-sm-4 col-sm-offset-2"><span class="stat_num"><%= @gist.age %></span><br><span class="stat_text">hours old</span></p>
     </div>
 
-    <div class="row stats">
+    <div class="row line">
       <p class="col-sm-4"><span class="stat_num"><%= @gist.commits %></span><br><span class="stat_text">Commits</span></p>
       <p class="col-sm-4 col-sm-offset-2"><span class="stat_num"><%= @gist.characters %></span><br><span class="stat_text">Characters</span></p>
     </div>
@@ -22,15 +22,13 @@
 
 <div class="row gist_file">
   <div class="col-sm-6 col-sm-offset-3 opaque_bg">
+    <%= link_to "", @gist.url, class: "genericon genericon-github", id: "source_icon_link" %>
     <h1 class="large light_text"><span class="neon_green">Gist</span><%= params[:id] %></h1>
     <p class="stat_text"><%= @gist.description %></p class="stat_text">
     <% @gist.file_body.each_with_index do |line, index| %>
-      <div class="row">
+      <div class="row line">
         <li class="col-sm-4"><span class="light_text"><%= index %></span> <span class="neon_green"><%= line %></span><li>
       </div>
     <% end %>
   </div>
-
 </div>
-
-URL: <%= @gist.url %>
