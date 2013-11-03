@@ -6,7 +6,7 @@ class Gist
   end
 
   def raw_data
-    if @access_token
+    if @github_access_token
       url = "https://api.github.com/gists/#{@id}?access_token=#{@github_access_token}"
     else
       url = "https://api.github.com/gists/#{@id}"
@@ -31,7 +31,7 @@ class Gist
   end
 
   def commits
-    JSON.parse(open(raw_data["commits_url"]).read).count
+    JSON.parse(open(raw_data["commits_url"]+"?access_token=#{@github_access_token}").read).count
   end
 
   def characters

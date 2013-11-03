@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :rate_limit, :rate_limit_reset
 
   def rate_limit
-    if current_user
+    if user_signed_in?
       url = "https://api.github.com/rate_limit?access_token=#{current_user.github_access_token}"
     else
       url = "https://api.github.com/rate_limit"

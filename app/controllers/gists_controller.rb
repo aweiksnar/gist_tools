@@ -5,7 +5,7 @@ class GistsController < ApplicationController
   end
 
   def show
-    if current_user
+    if user_signed_in?
       @gist = Gist.new(params[:id], current_user.github_access_token)
     else
       @gist = Gist.new(params[:id], nil)
