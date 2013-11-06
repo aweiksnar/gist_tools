@@ -14,6 +14,7 @@
   <p class="alert"><%= alert %></p>
   <span>
   <% if current_user %>
+    <%= button_to "Your Gists", gists_path, class: "circle_link" %><br>
     <%= link_to "", destroy_user_session_path, method: :delete, class: "genericon genericon-github big_icon orange_icon", id: "sign_out" %>
     <span class="icon_text">Sign out</span>
   <% else %>
@@ -35,7 +36,7 @@
     }
   );
 
-  if(<%= rate_limit %> <= 15)
+  if(<%= rate_limit %> <= 40)
     $("#api_counter").css("color", "orangered");
 
 </script>
