@@ -80,6 +80,10 @@ body {
   word-wrap:break-word;
 }
 
+#gist_show {
+  padding-bottom: 100px;
+}
+
 /*-----Text----------Text----------Text----------Text----------Text----------Text----------Text----------Text-----*/
 
 .light_text {
