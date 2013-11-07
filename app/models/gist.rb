@@ -31,7 +31,11 @@ class Gist
   end
 
   def commits
-    JSON.parse(open(raw_data["commits_url"]+"?access_token=#{@github_access_token}").read).count
+    if @github_access_token
+      JSON.parse(open(raw_data["commits_url"]+"?access_token=#{@github_access_token}").read).count
+    else
+      JSON.parse(open(raw_data["commits_url"]).read).count
+    end
   end
 
   def characters
