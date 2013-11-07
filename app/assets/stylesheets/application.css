@@ -53,7 +53,7 @@ body {
 /*-----Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds----------Backgrounds-----*/
 
 body {
- background: url(../assets/ocean_gradient.jpg) no-repeat center center fixed;
+ background: url(/ocean_gradient.jpg) no-repeat center center fixed;
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
